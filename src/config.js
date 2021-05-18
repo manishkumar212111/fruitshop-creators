@@ -7,5 +7,6 @@ module.exports = {
   SERVER_URL: process.env.REACT_APP_SERVER_URL,
   SOCKET_IO_ENDPOINT: process.env.REACT_APP_SERVER_URL,
   MAX_CART_LIMIT: process.env.MAX_CART_LIMIT, 
-  GA_TRACKING_ID: process.env.GA_TRACKING_ID
+  GA_TRACKING_ID: process.env.GA_TRACKING_ID,
+  API_BASE_URL: process.env.API_BASE_URL
 }

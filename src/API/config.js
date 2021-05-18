@@ -1,3 +1,6 @@
+
+import { API_BASE_URL } from "../config";
+
 const BASE_URL = 'http://localhost:5000/';
 // const BASE_URL = 'https://serene-springs-70492.herokuapp.com/';
 const IMAGE_URL = "https://ik.imagekit.io/i2wp0fsg8dx/";
