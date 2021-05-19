@@ -6,9 +6,9 @@ import axios from "axios"
 import { Modal } from 'react-bootstrap';
 import { UpdateUserById } from '../../../../../../actions/auth';
 import { connect } from "react-redux";
-import { SERVER_URL } from "../../../../../../config";
+import { REACT_APP_SERVER_URL } from "../../../../../../config";
 const axiosInstance = axios.create({
-  baseURL: SERVER_URL,
+  baseURL: REACT_APP_SERVER_URL,
 })
 
 // const getLoggedInUserToken = () => {

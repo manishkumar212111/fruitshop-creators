@@ -6,11 +6,11 @@ import { connect } from "react-redux";
 import "./index.scss";
 import { useHistory } from "react-router";
 import Shimmer from "../../../../widgets/shimmerEffect/index";
-import { SERVER_URL } from "../../../../../config";
+import { REACT_APP_SERVER_URL } from "../../../../../config";
 import CKEditor from "ckeditor4-react";
 
 const axiosInstance = axios.create({
-  baseURL: SERVER_URL,
+  baseURL: REACT_APP_SERVER_URL,
 })
 
 const defaultProps = {
