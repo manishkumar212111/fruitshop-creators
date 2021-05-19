@@ -8,7 +8,8 @@ import { useHistory } from "react-router";
 import Shimmer from "../../../../widgets/shimmerEffect/index";
 import { REACT_APP_SERVER_URL } from "../../../../../config";
 import CKEditor from "ckeditor4-react";
-
+const dotenv = require("dotenv");
+dotenv.config();
 const axiosInstance = axios.create({
   baseURL: REACT_APP_SERVER_URL,
 })
@@ -70,7 +71,7 @@ const Detail = (props) => {
     const handleImageSubmit = (files) => {
         let formData = new FormData()
         formData.append("file", files[0])
-        axiosInstance.post(REACT_APP_SERVER_URL + "/api/file/upload", formData, {
+        axiosInstance.post(process.env.REACT_APP_SERVER_URL + "/api/file/upload", formData, {
             headers: {
                 'content-type':'application/json',
             }

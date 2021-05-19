@@ -7,6 +7,9 @@ import { Modal } from 'react-bootstrap';
 import { UpdateUserById } from '../../../../../../actions/auth';
 import { connect } from "react-redux";
 import { REACT_APP_SERVER_URL } from "../../../../../../config";
+const dotenv = require("dotenv");
+dotenv.config();
+
 const axiosInstance = axios.create({
   baseURL: REACT_APP_SERVER_URL,
 })
@@ -34,7 +37,7 @@ const Theme = (props) => {
         // e.preventDefault() //prevent the form from submitting
         let formData = new FormData()
         formData.append("file", files[0])
-        axiosInstance.post(REACT_APP_SERVER_URL + "/api/file/upload?type="+type+"&userId="+getUserData('id'), formData, {
+        axiosInstance.post(process.env.REACT_APP_SERVER_URL + "/api/file/upload?type="+type+"&userId="+getUserData('id'), formData, {
             headers: {
                 'content-type':'application/json',
                 // 'Authorization' : 'Bearer ' + getLoggedInUserToken()
