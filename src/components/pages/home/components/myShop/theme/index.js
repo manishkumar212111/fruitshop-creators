@@ -37,7 +37,7 @@ const Theme = (props) => {
         // e.preventDefault() //prevent the form from submitting
         let formData = new FormData()
         formData.append("file", files[0])
-        axiosInstance.post(process.env.REACT_APP_SERVER_URL + "/api/file/upload?type="+type+"&userId="+getUserData('id'), formData, {
+        axiosInstance.post(process.env.REACT_APP_SERVER_URL + "api/file/upload?type="+type+"&userId="+getUserData('id'), formData, {
             headers: {
                 'content-type':'application/json',
                 // 'Authorization' : 'Bearer ' + getLoggedInUserToken()

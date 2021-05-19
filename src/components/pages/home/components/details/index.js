@@ -71,7 +71,7 @@ const Detail = (props) => {
     const handleImageSubmit = (files) => {
         let formData = new FormData()
         formData.append("file", files[0])
-        axiosInstance.post(process.env.REACT_APP_SERVER_URL + "/api/file/upload", formData, {
+        axiosInstance.post(process.env.REACT_APP_SERVER_URL + "api/file/upload", formData, {
             headers: {
                 'content-type':'application/json',
             }
