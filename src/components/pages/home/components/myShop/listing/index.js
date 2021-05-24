@@ -34,7 +34,7 @@ const Listing = (props) => {
                     <p className={'text'}>Create and customize your product listing</p>
                 </div>
 
-                {productList.map((itm , index) => (
+                {productList && productList.map((itm , index) => (
                     <div className="listingCard">
                     <div className="clearfix">
                         <div className="leftPanel">

@@ -36,7 +36,7 @@ const MarketPlace = (props) => {
                 ))}
             </p>
             {
-                productList.map((itm) => (
+                (Array.isArray(productList) && productList.length) ?  productList.map((itm) => (
                     <div>
                         <Link to={`/marketplace/${itm.id}`}><img src={"https://ik.imagekit.io/lcq5etn9k/productlisting/whole-foods_sWpde6_mP.png"}></img></Link>
                         <p>{itm.brandName}</p>
@@ -44,7 +44,7 @@ const MarketPlace = (props) => {
                         <button onClick={() => handleDuplicate(itm.id)} disabled={(activeId == itm.id) && props.duplicating_product}>Add to store</button>
 
                      </div>   
-                ))
+                )) : "No product available"
             }
             {/* {success ? <span>Thank you! We will be touch in you soon !</span> : <button className={"btn"} style={{backgroundColor : "#FF7F00" , "border-radius": "15px" , color : "white", "font-size" : "13px"}} onClick={handleClick}>Get early access</button>} */}
         </div>

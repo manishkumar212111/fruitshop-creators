@@ -16,6 +16,7 @@
     "ckeditor4-react": "^1.4.1",
     "dotenv": "^8.2.0",
     "helmet": "^4.5.0",
+    "html-webpack-plugin": "^4.5.0",
     "node-sass": "^5.0.0",
     "react": "^17.0.2",
     "react-bootstrap": "^1.5.2",
