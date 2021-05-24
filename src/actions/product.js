@@ -28,6 +28,35 @@ export const getProductByUserId = (productId) => dispatch =>{
   }
 }
 
+export const getProductList = (options) => dispatch =>{
+  try{
+      dispatch({
+          type : "PRODUCT_DETAIL_LOADING",
+          data : true
+      })
+    API.get('ProductOpen' , options, '' , function(res){
+      
+      if(res && res.data){
+          dispatch( { type: "PRODUCT_MARKET_PLACE",
+            data : res.data
+          });
+        } else {
+            //console.log(res.data.message);
+            res && res.data && dispatch(setAlert(res.data.message , 'danger'));    
+        }
+
+      dispatch({
+        type : "PRODUCT_DETAIL_LOADING",
+        data : false
+      })
+    })
+    
+  } catch (err) {
+    console.log(err)
+    console.log(err)
+  }
+}
+
 export const getProductById = (productId) => dispatch =>{
   try{
       dispatch({
@@ -133,6 +162,31 @@ export const updateProductById = (productId , data) => dispatch =>{
     } catch (err) {
       
     }
+  }
+
+  export const addToStore = (productId) => dispatch => {
+    try {
+
+      dispatch({
+        type : "DUPLICATING_PRODUCT",
+        data : true
+      })
+      API.post('ProductOpen' , {} , productId , function(res){
+        if(res && res.data && res.data.id) {
+            dispatch(setAlert("Product added" , 'success'));
+          } else {
+              //''
+              res && res.data && dispatch(setAlert(res.data.message , 'danger'));    
+          }
+          dispatch({
+            type : "DUPLICATING_PRODUCT",
+            data : true
+          })
+      })
+      
+    }
+     catch (err) {
+     }
   }
   
   

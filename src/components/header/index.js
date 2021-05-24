@@ -12,9 +12,10 @@ const Header = (props) => {
     const users = getUserData('id');
     setLogin(users);
     if(users){
+      document.getElementsByClassName('container')[0].classList.add('containerAfterLogin')
       document.body.style.backgroundColor = 'white';
     } else {
-      document.body.style.backgroundColor = 'black';
+      document.getElementsByClassName('container')[0].classList.remove('containerAfterLogin')
     }
   })
 
@@ -33,7 +34,7 @@ const Header = (props) => {
     <>
 
     
-  <header id="header" className="fixed-top">
+  <header id="header" className={`fixed-top ${isLogin ? "loginHeader" : ""}`}>
     <div className="container d-flex align-items-center">
 
       <div className="logo mr-auto">

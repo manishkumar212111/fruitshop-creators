@@ -32,10 +32,10 @@ const Home = (props) => {
       if(!popupText){
         const users = getUserData('id')
         if(users){
-          document.body.style.backgroundColor = 'white';
+          // document.body.style.backgroundColor = 'white';
           history.push("/home");
         } else {
-          document.body.style.backgroundColor = 'black';
+          // document.body.style.backgroundColor = '#ee7843';
         }
       }
     })
@@ -65,45 +65,64 @@ const Home = (props) => {
     return(
 
         <div className={"home"}>
-            <section className="hero-banner">
-              <div className="container">
-                <div className="banner-content">
-                  <h2 className="big-text">An online store</h2>
-                  <h2 className="big-text">made just</h2>
-                  <h2 className="big-text bordered-text">for you</h2>
-                  <div className="banner-btn">
+            <section class="hero-banner">
+              <div class="container-fluid">
+                <div class="banner-content">
+                  <h2 class="banner-big-text">An online store made just</h2>
+                  <h2 class="banner-big-text bordered-text">for you</h2>
+                  <div class="banner-btn">
                     <a href="#">claim your username</a>
                   </div>
                 </div>
+                <img class="banner-image" src="https://ik.imagekit.io/lcq5etn9k/productlisting/home-banner_isZHOveiw.png" alt="" />
               </div>
             </section>
 
-            <section className="second-section">
-              <div className="container">
-                <h3 className="medium-text">earn more. dream more. be more.</h3>
-                <h2 className="big-text">The ultimate</h2>
-                <h2 className="big-text">boutique maker</h2>
+            <section class="our-brands">
+              <div class="container-fluid">
+                <div class="brand-text">
+                  <h3>Offer brands sold at top retailers in your own store:</h3>
+                </div>
+                <ul>
+                  <li><img src="https://ik.imagekit.io/lcq5etn9k/productlisting/whole-foods_sWpde6_mP.png" alt="" /></li>
+                  <li><img src="https://ik.imagekit.io/lcq5etn9k/productlisting/urban-outfitters_OmXKc9qtv.png" alt="" /></li>
+                  <li><img src="https://ik.imagekit.io/lcq5etn9k/productlisting/ulta_-faUCrwCi.png" alt="" /></li>
+                  <li><img src="https://ik.imagekit.io/lcq5etn9k/productlisting/taks-fifth-avenue_rZDEKYSPj.png" alt="" /></li>
+                  <li><img src="https://ik.imagekit.io/lcq5etn9k/productlisting/sephora_UrJpy51sZ.png" alt="" /></li>
+                  <li><img src="https://ik.imagekit.io/lcq5etn9k/productlisting/nordstrom_z9GZaq5i52.png" alt="" /></li>
+                  <li><img src="https://ik.imagekit.io/lcq5etn9k/productlisting/neiman-marcus_VRNNwR76p.png" alt="" /></li>
+                  <li><img src="https://ik.imagekit.io/lcq5etn9k/productlisting/hot-topic_gBNl-ZAzWh.png" alt="" /></li>
+                  <li><img src="https://ik.imagekit.io/lcq5etn9k/productlisting/erewhon_RQa3SALZd.png" alt="" /></li>
+                </ul>
+              </div>
+            </section>
 
-                <div className="sec-text">
-                  <h4 className="section-title">Connect your audience to everything you sell with just one store</h4>
+            <section class="second-section">
+              <div class="container-fluid">
+                <h3 class="medium-text">earn more. dream more. be more.</h3>
+                <h2 class="big-text">The easiest way to start your own boutique</h2>
 
-                  <div className="row second-wrapper">
-                    <div className="col-lg-4 mb-5">
-                      <h2 className="big-text bordered-text">25%</h2>
-                      <p>commission on all products</p>
+                <div class="sec-text">
+                  <h4 class="section-title">Connect your audience to everything you sell with just one store</h4>
+
+                  <div class="row second-wrapper">
+                    <div class="col-lg-4 mb-5">
+                      <h2 class="big-text bordered-text">20%</h2>
+                      <p>profit on all products sold</p>
                     </div>
-                    <div className="col-lg-4 mb-5">
-                      <h2 className="big-text bordered-text">0</h2>
+                    <div class="col-lg-4 mb-5">
+                      <h2 class="big-text bordered-text">0</h2>
                       <p>cost and effort on shipping, packing, and holding inventory</p>
                     </div>
-                    <div className="col-lg-4">
-                      <h2 className="big-text bordered-text">1000+</h2>
+                    <div class="col-lg-4">
+                      <h2 class="big-text bordered-text">1000+</h2>
                       <p>products from the best brands across 5 categories to help you express your full self</p>
                     </div>
                   </div>
                 </div>
               </div>
-        </section>
+            </section>
+
 
 
 

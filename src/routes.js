@@ -7,9 +7,10 @@ import Index from "./components/pages/home/index";
 import Landing from "./components/pages/home/components/landing";
 import Listing from "./components/pages/home/components/listing";
 import Detail from "./components/pages/home/components/details/index";
-import Account from "./components/pages/home/components/myShop/account"
-import MarketPlace from "./components/pages/marketPlace/index"
-import Analytics from "./components/pages/analytics/index"
+import Account from "./components/pages/home/components/myShop/account";
+import MarketPlace from "./components/pages/marketPlace/index";
+import MarketPlaceDetail from "./components/pages/marketPlace/productDetail";
+import Analytics from "./components/pages/analytics/index";
 
 export default [
     {
@@ -49,9 +50,14 @@ export default [
         component: Landing,
     },
     {
+        path: "/marketplace/:id",
+        component: MarketPlaceDetail,
+    },
+    {
         path: "/marketplace",
         component: MarketPlace,
     },
+    
     {
         path: "/analytics",
         component: Analytics,
