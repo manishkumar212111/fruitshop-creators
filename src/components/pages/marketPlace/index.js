@@ -32,7 +32,7 @@ const MarketPlace = (props) => {
             <h2>Your one-stop shop for sourcing the best products</h2>
             <p>
                 {categories.map((itm) => (
-                    <li onClick={() => handleCategoryClick(itm.id)}>{itm.id}</li>
+                    <li onClick={() => handleCategoryClick(itm.id)}>{itm.text}</li>
                 ))}
             </p>
             {
