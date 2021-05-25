@@ -1,7 +1,7 @@
 
 import { REACT_APP_SERVER_URL } from "../config";
 
-const BASE_URL = REACT_APP_SERVER_URL;
+const BASE_URL = REACT_APP_SERVER_URL || "https://api.superfruit.app/";
 const dotenv = require("dotenv");
 dotenv.config();
 // const BASE_URL = 'https://serene-springs-70492.herokuapp.com/';
