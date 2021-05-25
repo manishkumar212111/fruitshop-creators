@@ -1,13 +1,14 @@
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    target:'node',
+    target:'web',
 
   mode: "development",
   entry: './src/index.js',
   resolve: {
     extensions: [".js"]
   },
+  node: {fs: "empty"},
   module: {
     rules: [
        {
@@ -35,15 +36,5 @@ module.exports = {
   ],
   devServer: {
     historyApiFallback: true,
-    headers: {
-      'Cache-Control': 'no-store',
-      get etag() { return Math.random() + ''; },
-    },
   },
-  externals: {
-    // global app config object
-    config: JSON.stringify({
-      apiUrl: "/api"
-    })
-  }
 };
