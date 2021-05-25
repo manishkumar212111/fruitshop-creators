@@ -1,21 +1,36 @@
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+    target:'node',
+
   mode: "development",
+  entry: './src/index.js',
   resolve: {
-    extensions: [".js", ".jsx"]
+    extensions: [".js"]
   },
   module: {
     rules: [
-      {
-        test: /\.jsx?$/,
-        loader: "babel-loader"
-      }
+       {
+          test: /\.js$/,
+          use: 'babel-loader',
+       },
+       {
+          test: /\.css$/,
+          use: ['style-loader', 'css-loader'],
+       },
+       {
+        test: /\.scss$/,
+        use: ['css-loader' , 'sass-loader'],
+        },
+       {
+          test: /\.(png|j?g|svg|gif)?$/,
+          use: 'file-loader'
+       }
     ]
-  },
+    },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html"
+      template: "./public/index.html"
     })
   ],
   devServer: {
