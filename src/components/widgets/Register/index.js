@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Register = (props) => {
     const [fieldobj , setFieldObj] = useState({ userName : "",  email : "" , password : "" });
     const [errorObj , setErrorObj] = useState({ email : { error : true , msg : "Please enter valid email" } , 
-                                                password : { error : true , msg : "Please enter valid password" },
+                                                password : { error : true , msg : "Password should be minimum 8 chars" },
                                                 userName : { error : true , msg : "This is required field" },
                                              })
     const validateField = (key , value) => {
@@ -17,7 +17,7 @@ const Register = (props) => {
             case "email" :
                 return  validateUtility.email(value)
             case "password" :
-                return  validateUtility.required(value)
+                return  validateUtility.minLength(value , 8) && validateUtility.required(value)
                 
             default :
                 return true;
@@ -34,7 +34,8 @@ const Register = (props) => {
         setErrorObj( errorOb => ( { ...errorOb , errOb}))
     }
     
-    const handleClick = () => {
+    const handleClick = (e) => {
+        e.preventDefault();
         let requiredObj = ['userName' , 'email' , 'password'];
         let errOb = errorObj;
 
@@ -52,9 +53,6 @@ const Register = (props) => {
 
     }
 
-    const loginCb = (token) => {
-        props.googleLoginCb(token);
-    }
 
     return (
         <div>
@@ -76,30 +74,32 @@ const Register = (props) => {
         <div className="tab-pane fade show active" id="registertab" role="tabpanel" aria-labelledby="v-pills-profile-tab">
             <h2 className="loginHeading">Sign Up</h2>
             <p className="fb">Continue to your store</p>
-            <div className="row">
-                <div className="col-md-12 form-group mt-1">
-                    <span className="error">{!errorObj.userName.error && errorObj.userName.msg}</span>          
-                    <input className="form-control f-12 loginInput" type="text" placeholder="Enter username" name="userName" value={fieldobj.userName} onChange={(e) => handleChange(e)}/>
-                </div>
-                
-                <div className="col-md-12 form-group mt-1">
-                    <span className="error">{!errorObj.email.error && errorObj.email.msg}</span>
-                    <input className="form-control f-12 loginInput" type="text" placeholder="Enter Email" name="email" value={fieldobj.email} onChange={(e) => handleChange(e)}/>
-                </div>
-                <div className="col-md-12 form-group mt-1">
-                    <span className="error">{!errorObj.password.error && errorObj.password.msg}</span>
-                    <input className="form-control f-12 loginInput" type="password" placeholder="Enter Password" name="password" value={fieldobj.password} onChange={(e) => handleChange(e)}/>
-                </div>
-                <div className="col-md-12">
-                    <p className="f-12"><span className="mdi mdi-check"></span> By creating an account you are agreeing to our <strong>Terms of Service</strong> and <strong>Privacy Policy</strong></p></div>
-                <div className="col-md-12 text-center" onClick={handleClick}>
-                    <button  className="btn btn-primary d-block shadow loginButton" disabled={props.login_user_loading}>Register</button>
-                    <Link className="loginLink" to="/#login"> Already have a store? <strong>Log in</strong></Link>
-                </div>
-                
+            <form onSubmit={ (e) => handleClick(e)} method="post">
+                <div className="row">
+                    <div className="col-md-12 form-group mt-1">
+                        <span className="error">{!errorObj.userName.error && errorObj.userName.msg}</span>          
+                        <input className="form-control f-12 loginInput" type="text" placeholder="Enter username" name="userName" value={fieldobj.userName} onChange={(e) => handleChange(e)}/>
+                    </div>
+                    
+                    <div className="col-md-12 form-group mt-1">
+                        <span className="error">{!errorObj.email.error && errorObj.email.msg}</span>
+                        <input className="form-control f-12 loginInput" type="text" placeholder="Enter Email" name="email" value={fieldobj.email} onChange={(e) => handleChange(e)}/>
+                    </div>
+                    <div className="col-md-12 form-group mt-1">
+                        <span className="error">{!errorObj.password.error && errorObj.password.msg}</span>
+                        <input className="form-control f-12 loginInput" type="password" placeholder="Enter Password" name="password" value={fieldobj.password} onChange={(e) => handleChange(e)}/>
+                    </div>
+                    <div className="col-md-12">
+                        <p className="f-12"><span className="mdi mdi-check"></span> By creating an account you are agreeing to our <strong>Terms of Service</strong> and <strong>Privacy Policy</strong></p></div>
+                    <div className="col-md-12 text-center">
+                        <button type="submit"  className="btn btn-primary d-block shadow loginButton" disabled={props.login_user_loading}>Register</button>
+                        <Link className="loginLink" to="/#login"> Already have a store? <strong>Log in</strong></Link>
+                    </div>
+                    
 
-                
-            </div>
+                    
+                </div>
+            </form>
         </div>
         </div>
         </div>

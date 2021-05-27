@@ -29,7 +29,8 @@ const Login = (props) => {
         setErrorObj( errorOb => ( { ...errorOb , errOb}))
     }
     
-    const handleClick = () => {
+    const handleClick = (e) => {
+        e.preventDefault();
         let requiredObj = ['userName' , 'password'];
         let errOb = errorObj;
 
@@ -69,32 +70,35 @@ const Login = (props) => {
         <div className="" id="logintab" role="tabpanel" aria-labelledby="v-pills-home-tab">
             <h2 className="loginHeading">Log in</h2>
             <p className="fb">Continue to your store</p>
-            <div className="row">
-                <div className="col-md-12 form-group mt-1 text-right">
-                  <span className="error">{!errorObj.userName.error && errorObj.userName.msg}</span>
-                    
-                    {/* <Link className="loginLink" to="/#forgot"> Forgot username?</Link> */}
-                    <input className="form-control f-12 loginInput mt-1" type="text" placeholder="Enter UserName" name="userName" value={fieldobj.userName} onChange={(e) => handleChange(e)} />
-                </div>
-                <div className="col-md-12 form-group">
-                    <span className="error">{!errorObj.password.error && errorObj.password.msg}</span>
-                    <input className="form-control f-12 loginInput" type="password" placeholder="Enter Password" name="password" value={fieldobj.password} onChange={(e) => handleChange(e)} />
-                </div>
+                <form onSubmit={(e)=> handleClick(e)}>
 
-                <div className="col-md-12 text-right">
-                    <button href="#" className={`btn btn-primary d-block shadow loginButton loginLink`} disabled={props.login_user_loading} onClick={handleClick}>Login</button> 
-                </div>
-                {/* <div className="col-md-12"><div className="option text-center"><span>or</span></div></div> */}
-                <div className="col-md-12 text-center">
+                    <div className="row">
+                        <div className="col-md-12 form-group mt-1 text-right">
+                        <span className="error">{!errorObj.userName.error && errorObj.userName.msg}</span>
+                            
+                            {/* <Link className="loginLink" to="/#forgot"> Forgot username?</Link> */}
+                            <input className="form-control f-12 loginInput mt-1" type="text" placeholder="Enter UserName" name="userName" value={fieldobj.userName} onChange={(e) => handleChange(e)} />
+                        </div>
+                        <div className="col-md-12 form-group">
+                            <span className="error">{!errorObj.password.error && errorObj.password.msg}</span>
+                            <input className="form-control f-12 loginInput" type="password" placeholder="Enter Password" name="password" value={fieldobj.password} onChange={(e) => handleChange(e)} />
+                        </div>
 
-                    <Link className="loginLink" to="/#forgot"> Forgot password?</Link>
-                     <div className="loginLink mt-2">New to Superfruit?<Link className="loginLink" to="/#register"> <strong>Get started</strong></Link></div>
-                    
+                        <div className="col-md-12 text-right">
+                            <button type="submit" href="#" className={`btn btn-primary d-block shadow loginButton loginLink`} disabled={props.login_user_loading} >Login</button> 
+                        </div>
+                        {/* <div className="col-md-12"><div className="option text-center"><span>or</span></div></div> */}
+                        <div className="col-md-12 text-center">
 
-                    {/* <GoogleLoginButton loginCb = {loginCb} buttonText="Login with Google" />  */}
-                    {/* <a href="#" className="btn btn-outline-muted d-block mt-4 shadow"><img src={google} /> Login with Google</a>  */}
-                </div>
-            </div>
+                            <Link className="loginLink" to="/#forgot"> Forgot password?</Link>
+                            <div className="loginLink mt-2">New to Superfruit?<Link className="loginLink" to="/#register"> <strong>Get started</strong></Link></div>
+                            
+
+                            {/* <GoogleLoginButton loginCb = {loginCb} buttonText="Login with Google" />  */}
+                            {/* <a href="#" className="btn btn-outline-muted d-block mt-4 shadow"><img src={google} /> Login with Google</a>  */}
+                        </div>
+                    </div>
+            </form>
         </div>
         </div>
          </div>
