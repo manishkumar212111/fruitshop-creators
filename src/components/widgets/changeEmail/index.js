@@ -50,12 +50,12 @@ const ChangeEmail = (props) => {
     return (
             <>
                 <div>
-                    <label className="text-muted" for="uname"><b>Your Old password</b></label>
+                    <label className="text-muted" htmlFor="uname"><b>Your Old password</b></label>
                     <input type="password" className="form-control mb-4"  placeholder="Enter Password" name="old_password" value={fieldobj.old_password} onChange={(e) => handleChange(e)} required />
                     <span className="error">{!errorObj.old_password.error && errorObj.old_password.msg}</span>
                 </div>
                 <div>
-                    <label className="text-muted" for="uname"><b>Your New email</b></label>
+                    <label className="text-muted" htmlFor="uname"><b>Your New email</b></label>
                     <input className="form-control mb-4" type="text" placeholder="Enter email" name="email" value={fieldobj.email} onChange={(e) => handleChange(e)} required />
                     <span className="error">{!errorObj.email.error && errorObj.email.msg}</span>
                 </div>

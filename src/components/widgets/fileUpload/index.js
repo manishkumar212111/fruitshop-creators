@@ -1,7 +1,7 @@
 import React , { useState} from 'react';
 import axios from "axios"
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "https://api.superfruit.app",
 })
 
 const getLoggedInUserToken = () => {
@@ -25,7 +25,7 @@ const Index = (props) => {
     return (
         <div>
             <form
-                action="http://localhost:5000/api/file/upload"
+                action="https://api.superfruit.app/api/file/upload"
                 method="post"
                 encType="multipart/form-data"
                 onSubmit={submitHandler}

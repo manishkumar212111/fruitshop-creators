@@ -106,10 +106,10 @@ const Login = (props) => {
         // <div className="login-container">  
         //     <GoogleLoginButton loginCb = {loginCb}/>  
         //     <div className="container">
-        //         <label for="uname"><b>Email</b></label>
+        //         <label htmlFor="uname"><b>Email</b></label>
         //             <span className="error">{!errorObj.userName.error && errorObj.userName.msg}</span>
         //             <input type="text" placeholder="Enter Email" name="userName" value={fieldobj.userName} onChange={(e) => handleChange(e)} required />
-        //         <label for="psw"><b>Password</b></label>
+        //         <label htmlFor="psw"><b>Password</b></label>
         //             <span className="error">{!errorObj.password.error && errorObj.password.msg}</span>
         //             <input type="password" placeholder="Enter Password" name="password" value={fieldobj.password} onChange={(e) => handleChange(e)} required />
         //         <button type="submit" onClick={handleClick}>Login</button>

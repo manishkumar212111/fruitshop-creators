@@ -1,15 +1,12 @@
-import React from "react";
-import { Switch, Route } from "react-router-dom";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
-import { connect } from "react-redux";
-  
-import Header from "./header";
-import routes from "../routes";
-import Footer from "./Footer";
-import { Container } from 'react-bootstrap'
-
+import React from "react"
+import { Switch, Route, Redirect } from "react-router-dom"
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import { connect } from "react-redux"
+import Header from "./header"
+import routes from "../routes"
+import Footer from "./footer"
+import { getUserData } from "../utils/globals"
 
 class Layout extends React.Component {
     constructor() {
@@ -18,6 +15,7 @@ class Layout extends React.Component {
             title: "Welcome to Fruit store!",
         };
         this.handleScroll = this.handleScroll.bind(this);
+        this.isLogin = getUserData('id')
     }
 
     componentDidMount() {
@@ -30,7 +28,7 @@ class Layout extends React.Component {
     createNotification(type, message) {
         let configs = {
             position: "top-right",
-            autoClose: 5000,
+            autoClose: 3000,
             hideProgressBar: false,
             closeOnClick: false,
             pauseOnHover: true,
@@ -46,6 +44,7 @@ class Layout extends React.Component {
             return toast.warn(message, configs);
           case "danger":
             return toast.error(message, configs);
+          default:
         }
       }
 
@@ -55,22 +54,22 @@ class Layout extends React.Component {
         alerts.length > 0 &&
         alerts.map((alert, idx) => {
           this.createNotification(`${alert.alertType}`, alert.msg);
+          return idx
         });
     }
 
     handleScroll(e) {
       let elem = document.querySelector("#header");
       if(document.getElementById('root').getBoundingClientRect().top < -25){
-        elem && elem.classList.add('header-bg')
+        elem && this.isLogin ? elem.classList.add('header-yellow-bg') : elem.classList.add('header-bg')
       } else {
         elem && elem.classList.remove('header-bg')
+        elem && elem.classList.remove('header-yellow-bg')
       }
 
     }
 
     render() {
-
-        
         return (
             <div>
                 <ToastContainer 
@@ -84,16 +83,16 @@ class Layout extends React.Component {
                     draggable
                     pauseOnHover
                 />
-                {/* <h1>{ this.state.title }</h1> */}
-                <Container>
-                  <Header />
-                  <div id="main" onScroll={(e) => this.handleScroll(e)}>
-                    <Switch>
-                        { routes.map( route => <Route key={ route.path } { ...route } /> ) }
-                    </Switch>
-                  </div>
-                  <Footer />
-                </Container>
+                <Header />
+                <div id="main" onScroll={(e) => this.handleScroll(e)}>
+                  <Switch>
+                      { routes.publicRouter.map( route => <Route key={ route.path } { ...route } /> ) }
+                      { routes.privateRouter.map( route => 
+                        this.isLogin ? <Route key={ route.path } { ...route } />
+                                : <Redirect to={{ pathname: '/login'}}/> ) }
+                  </Switch>
+                </div>
+                <Footer />
             </div>
         );
     }

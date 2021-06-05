@@ -1,4 +1,4 @@
-import React , { useState , useEffect , Fragment } from "react";
+import React , { useState } from "react";
 import "./register.css";
 import validateUtility from "../../../utils/ValidateUtility"
 import { Link } from "react-router-dom";
