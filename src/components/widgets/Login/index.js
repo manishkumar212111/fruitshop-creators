@@ -2,7 +2,7 @@ import React , { useState , useEffect , Fragment } from "react";
 import "./login.css";
 import validateUtility from "../../../utils/ValidateUtility"
 import { Link } from "react-router-dom";
-const Login = (props) => {
+const Login = ({SubmitCb, login_user_loading}) => {
     const [fieldobj , setFieldObj] = useState({ userName : "" , password : "" });
     const [errorObj , setErrorObj] = useState({ userName : { error : true , msg : "Please enter valid userName" } , 
                                                 password : { error : true , msg : "Please enter valid password" } })
@@ -43,8 +43,7 @@ const Login = (props) => {
         setErrorObj( errorOb => ( { ...errorOb , errOb}))
         if(!status)
             return;
-        
-        props.SubmitCb(fieldobj)  
+        SubmitCb(fieldobj)  
 
     }
 
@@ -85,7 +84,7 @@ const Login = (props) => {
                         </div>
 
                         <div className="col-md-12 text-right">
-                            <button type="submit" href="#" className={`btn btn-primary d-block shadow loginButton loginLink`} disabled={props.login_user_loading} >Login</button> 
+                            <button type="submit" href="#" className={`btn btn-primary d-block shadow loginButton loginLink`} disabled={login_user_loading} >Login</button> 
                         </div>
                         {/* <div className="col-md-12"><div className="option text-center"><span>or</span></div></div> */}
                         <div className="col-md-12 text-center">

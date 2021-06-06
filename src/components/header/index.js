@@ -12,6 +12,7 @@ const Header = (props) => {
   const history = useHistory();
   const [isLogin , setLogin] = useState(getUserData('id'));
   const [showSideMenu , setShowSideMenu] = useState(false);
+  const [showSidebarMenu, setShowSidebarMenu] = useState(false);
   
   useEffect(() => {
     const users = getUserData('id');
@@ -34,6 +35,10 @@ const Header = (props) => {
     setShowSideMenu(!showSideMenu)
   }
 
+  const toggleSidebarMenu = () => {
+    setShowSidebarMenu(!showSidebarMenu)
+  }
+
   const gotoMyAccount = () => {
     history.push("/my-account")
   }
@@ -42,22 +47,40 @@ const Header = (props) => {
     history.push("/landing")
   }
 
+  const gotoLogin = () => {
+    setShowSidebarMenu(false)
+    history.push("/#login")
+  }
+
+  const gotoRegister = () => {
+    setShowSidebarMenu(false)
+    history.push("/#register")
+  }
+
   return (
     <>
     <header id="header" className='fixed-top' >
       {!isLogin &&
-        <div className="container d-flex align-items-center">
-          <div className="logo mr-auto">
-            <h1><a href="/"><span>Superfruit</span></a></h1>
-          </div>
-
-          <div className="login">
-            <Link to="#login">Login</Link>
-          </div>
-          <div className="clearfix"></div>
-          <div className="row">
-            <div className="col-md-12">
+        <div className="header">
+          <div className="desktop">
+            <div className="left">
+              <img src={Logo} alt="logo"/>
+              <ul>
+                <li>
+                  <a href="#">For store owners</a>
+                  <a href="#">For vendors</a>
+                  <a href="#">For shoppers</a>
+                </li>
+              </ul>
             </div>
+            <div className="right">
+              <a href="#login">Log In</a>
+              <a href="#register">Claim your store</a>
+            </div>
+          </div>
+          <div className="mobile">
+            <img src={MobileLogo} alt="" />
+            <img src={SidebarIcon} onClick={() => toggleSidebarMenu()} alt=""/>
           </div>
         </div>
       }
@@ -78,6 +101,33 @@ const Header = (props) => {
         <p className="menu-item" onClick={gotoMyAccount}>My account</p>
         <hr className="menu-line"/>
         <p className="menu-item" onClick={handleLogout}>Log out</p>
+      </div>
+    }
+
+    {showSidebarMenu &&
+      <div id="menu">
+        <div className="header">
+          <img className="logo" src={WhiteLogo} alt="" />
+          <img src={CloseIcon} alt="" onClick={() => toggleSidebarMenu()} />
+        </div>
+
+        <ul>
+          <li>
+            <a href="#">For store owners</a>
+          </li>
+          <li>
+            <a href="#">For vendors</a>
+          </li>
+          <li>
+            <a href="#">For shoppers</a>
+          </li>
+          <li>
+            <a onClick={gotoLogin}>Log in</a>
+          </li>
+          <li>
+            <a onClick={gotoRegister}>Claim your store</a>
+          </li>
+        </ul>
       </div>
     }
     </> 
