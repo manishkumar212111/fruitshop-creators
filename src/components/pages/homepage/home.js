@@ -189,6 +189,11 @@ const Homepage = (props) => {
                       <p className="title">
                         2. Share
                       </p>
+                      <ul>
+                        <li>Promote your store launch</li>
+                        <li>Connect your store to your social media</li>
+                        <li>Share products with your community</li>
+                      </ul>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
