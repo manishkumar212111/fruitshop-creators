@@ -19,6 +19,7 @@ import ContentImg1 from '../../../assets/img/content/1.png'
 import ContentImg2 from '../../../assets/img/content/2.png'
 import ContentImg3 from '../../../assets/img/content/3.png'
 import ContentImg4 from '../../../assets/img/content/4.png'
+import Soko from '../../../assets/img/soko.jpg'
 
 // const sponserImages = [
 //  "https://ik.imagekit.io/lcq5etn9k/productlisting/whole-foods_sWpde6_mP.png",
@@ -110,7 +111,7 @@ const Homepage = (props) => {
                 Starting your own retail business has never been easier
               </p>
               <p className="description">
-                Find and sell brands from top retailers immediately. $0 to get started.
+                Design your own store with products from top retailers. No cost, no hassle, no risk.
               </p>
               <button onClick={gotoRegister}>JOIN SUPERFRUIT FREE</button>
             </div>
@@ -130,6 +131,7 @@ const Homepage = (props) => {
             <img src="https://ik.imagekit.io/lcq5etn9k/productlisting/neiman-marcus_VRNNwR76p.png" alt="" />
             <img src="https://ik.imagekit.io/lcq5etn9k/productlisting/hot-topic_gBNl-ZAzWh.png" alt="" />
             <img src="https://ik.imagekit.io/lcq5etn9k/productlisting/erewhon_RQa3SALZd.png" alt="" />
+            <img src={Soko} alt=""></img>
           </Marquee>
           <div className="content">
             <div className="commerce">
@@ -138,15 +140,15 @@ const Homepage = (props) => {
                 Transformed
               </p>
               <p className="description">
-                Superfruit is a place where people come to build lasting businesses.<br/><br/>
-                We’ve transformed every aspect of commerce so our store owners can focus on what they are best at — telling
-                their story to the world.<br/><br/>
-                Find and add products directly to your Superfruit store so you can start selling right away. We vetted thousands
-                of brands from top retailers so you don’t have to. Run your business without the hassle of managing inventory,
-                packaging, or shipping. Products are directly sent from Superfruit to your customer in 2 to 14 days. Generate
-                healthy income with 20% profit on every sale. We’ll also help with brand deals and collaborations to get the
-                most maximize how much you can earn.<br/>
-                Learn more about how Superfruit works below:
+                Superfruit is a place where those with high ambition come to build lasting businesses.<br/><br/>
+                We’ve transformed every aspect of commerce so our owners can earn more, dream more, and be more.
+                <ul>
+                  <li>Find and add products directly to your Superfruit store so you can start selling right away. We vetted thousands of brands from top retailers so you don’t have to. 
+</li>
+<li>Run your business without the hassle of managing vendors, inventory, packaging, or shipping. Products are directly sent from Superfruit to your customer in 2 to 14 days. </li>
+<li>Generate a healthy income with 20% profit on every sale. We also help with brand deals and collaborations to maximize how much you can earn.</li>
+                </ul><br/>
+                We empower more individuals to start a business by removing the obstacles to starting and running one. Learn more about how Superfruit works below:
               </p>
             </div>
             <div className="superfruit">
@@ -155,9 +157,7 @@ const Homepage = (props) => {
                   Superfruit is for everyone
                 </p>
                 <p className="description">
-                  Anyone can join Superfruit and access thousands of diverse brands with profit margins you won’t find anywhere
-                  else. We take care of retail logistics free of charge, so you never have to worry about the cost of running
-                  your business.
+                We make commerce better for everyone, so owners can focus on what they do best — growing their business with unparrelled creativity, speed, and drive.
                 </p>
               </div>
               {isMobile ? 
@@ -176,8 +176,8 @@ const Homepage = (props) => {
                         1. Create & Curate
                       </p>
                       <ul>
-                        <li>Personalize your store’s appearance and content</li>
-                        <li>Pick products to sell or create your own listing</li>
+                        <li>Create a store that looks and feels like you</li>
+                        <li>Curate your catalog with products you love</li>
                         <li>Launch your business in minutes, not weeks</li>
                       </ul>
                     </div>
@@ -188,11 +188,6 @@ const Homepage = (props) => {
                       <p className="title">
                         2. Share
                       </p>
-                      <ul>
-                        <li>Create content to inspire fans to visit your store</li>
-                        <li>Make it easy for your fans to find your store by
-                          adding links to your store in your content and profile</li>
-                      </ul>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
@@ -202,10 +197,9 @@ const Homepage = (props) => {
                         3. Get results
                       </p>
                       <ul>
-                        <li>Tap into exclusive first-party insights on audience demos,, growth trends, best-performing stores and
-                          much more</li>
-                        <li>Generate custom reports on your store’s performance</li>
-                        <li>Get paid immediately through Stripe</li>
+                        <li>Get 20% profit on every sale</li>
+                        <li>We handle the rest including shipping, customer support, vendor relationships, and holding inventory.</li>
+                        <li>Tap into exclusive first-party insights on audience demos, growth trends, best-performing stores and much more</li>
                       </ul>
                     </div>
                   </SwiperSlide>
@@ -216,9 +210,8 @@ const Homepage = (props) => {
                         4. Optimize
                       </p>
                       <ul>
-                        <li>Add or remove products in your store</li>
-                        <li>Customize your product image and description</li>
-                        <li>Feature your own brand, brand deals, and brand collaborations</li>
+                        <li>Optimize your catalog by adding, removing, or editing your listings to your taste</li>
+                        <li>Feature your own brands, brand deals, and collaborations</li>
                       </ul>
                     </div>
                   </SwiperSlide>
@@ -232,23 +225,22 @@ const Homepage = (props) => {
                   <p className="title">
                     1. Create & Curate
                   </p>
-                  <ul>
-                    <li>Personalize your store’s appearance and content</li>
-                    <li>Pick products to sell or create your own listing</li>
-                    <li>Launch your business in minutes, not weeks</li>
-                  </ul>
+                      <ul>
+                        <li>Create a store that looks and feels like you</li>
+                        <li>Curate your catalog with products you love</li>
+                        <li>Launch your business in minutes, not weeks</li>
+                      </ul>
                 </div>
                 <div className="item">
                   <img src={ContentImg3} />
                   <p className="title">
                     3. Get results
                   </p>
-                  <ul>
-                    <li>Tap into exclusive first-party insights on audience demos,, growth trends, best-performing stores and
-                      much more</li>
-                    <li>Generate custom reports on your store’s performance</li>
-                    <li>Get paid immediately through Stripe</li>
-                  </ul>
+                      <ul>
+                        <li>Get 20% profit on every sale</li>
+                        <li>We handle the rest including shipping, customer support, vendor relationships, and holding inventory.</li>
+                        <li>Tap into exclusive first-party insights on audience demos, growth trends, best-performing stores and much more</li>
+                      </ul>
                 </div>
               </div>
               <div className="col">
@@ -257,22 +249,21 @@ const Homepage = (props) => {
                   <p className="title">
                     2. Share
                   </p>
-                  <ul>
-                    <li>Create content to inspire fans to visit your store</li>
-                    <li>Make it easy for your fans to find your store by
-                      adding links to your store in your content and profile</li>
-                  </ul>
+                      <ul>
+                        <li>Promote your store launch</li>
+                        <li>Connect your store to your social media</li>
+                        <li>Share products with your community</li>
+                      </ul>
                 </div>
                 <div className="item">
                   <img src={ContentImg4} alt=""/>
                   <p className="title">
                     4. Optimize
                   </p>
-                  <ul>
-                    <li>Add or remove products in your store</li>
-                    <li>Customize your product image and description</li>
-                    <li>Feature your own brand, brand deals, and brand collaborations</li>
-                  </ul>
+                      <ul>
+                        <li>Optimize your catalog by adding, removing, or editing your listings to your taste</li>
+                        <li>Feature your own brands, brand deals, and collaborations</li>
+                      </ul>
                 </div>
               </div>
             </div>}
@@ -287,9 +278,9 @@ const Homepage = (props) => {
             </div>
             <ul>
               <li>
-                <a href="#">Terms of Service</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">FAQ</a>
+                <a href="https://www.notion.so/joinguppy/Terms-of-Services-05d20bf0aebc4c8bbf435edd8d429a13"target="_blank">Terms of Service</a>
+                <a href="https://www.notion.so/joinguppy/Privacy-Policy-77c1bac7873f46868a410b109e1312c4"target="_blank">Privacy Policy</a>
+                <a href="https://www.notion.so/joinguppy/FAQ-e8cfcca57e6b4c779c53c81ed7ef9803"target="_blank">FAQ</a>
               </li>
             </ul>
           </div>

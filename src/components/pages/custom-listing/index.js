@@ -143,7 +143,7 @@ const CustomListing = (props) => {
                 <div className="header">
                     <img src={UndoIcon} onClick={goBackHome} className="desktop-undo"></img>
                     {/* <img src={WhiteUndoIcon} onClick={goBackHome} className="mobile-undo"></img> */}
-                    <button className="mobile-undo" onClick={goBackHome}>Unsaved Product</button>
+                    {/* <button className="mobile-undo" onClick={goBackHome}>Unsaved Product</button> */}
                     <button className="discard-button" onClick={goBackHome}>Discard</button>
                     <button className="save-button" onClick={handleSubmit}>Save</button>
                 </div>

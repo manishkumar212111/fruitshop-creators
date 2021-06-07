@@ -3,9 +3,9 @@ import './index.scss'
 import { getUserData , clearUserData} from "../../utils/globals"
 import { Link, useHistory } from "react-router-dom"
 import Logo from '../../assets/img/logo.png'
-import MobileLogo from '../../assets/img/mobile-logo.svg'
+import MobileLogo from '../../assets/img/mobile-logo.png'
 import WhiteLogo from '../../assets/img/white-logo.svg'
-import SidebarIcon from '../../assets/img/sidebar-icon.svg'
+import SidebarIcon from '../../assets/img/hambuger.png'
 import CloseIcon from '../../assets/img/close.svg'
 
 const Header = (props) => {
@@ -67,9 +67,9 @@ const Header = (props) => {
               <img src={Logo} alt="logo"/>
               <ul>
                 <li>
-                  <a href="#">For store owners</a>
-                  <a href="#">For vendors</a>
-                  <a href="#">For shoppers</a>
+                  <a href="https://superfruit.formstack.com/forms/owners">For store owners</a>
+                  <a href="https://superfruit.formstack.com/forms/business">For vendors</a>
+                  <a href="https://superfruit.formstack.com/forms/support">For shoppers</a>
                 </li>
               </ul>
             </div>
@@ -113,13 +113,13 @@ const Header = (props) => {
 
         <ul>
           <li>
-            <a href="#">For store owners</a>
+            <a href="https://superfruit.formstack.com/forms/owners"target="_blank">For store owners</a>
           </li>
           <li>
-            <a href="#">For vendors</a>
+            <a href="https://superfruit.formstack.com/forms/business"target="_blank">For vendors</a>
           </li>
           <li>
-            <a href="#">For shoppers</a>
+            <a href=" https://superfruit.formstack.com/forms/support"target="_blank">For shoppers</a>
           </li>
           <li>
             <a onClick={gotoLogin}>Log in</a>

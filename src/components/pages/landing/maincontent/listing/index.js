@@ -27,8 +27,8 @@ const ProductListing = (props) => {
                         <p className="product-detail">{item.brandName}</p>
                         <p className="product-detail">{item.productName}</p>
                         <p className="product-detail">${item.price}</p>
-                        {item.productDescription && <p dangerouslySetInnerHTML={{ __html: item.productDescription ? item.productDescription.replaceAll('&lt;' , '<') : 'product description' }} className="product-detail">
-                        </p>}
+                        {item.productDescription && <div dangerouslySetInnerHTML={{ __html: item.productDescription ? item.productDescription.replaceAll('&lt;' , '<') : 'product description' }} className="product-detail">
+                        </div>}
                         <p className="product-detail">{item.promoCode}</p>
                         <p className="product-detail">{item.url}</p>
                     </div>

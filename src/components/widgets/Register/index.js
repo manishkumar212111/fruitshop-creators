@@ -91,7 +91,7 @@ const Register = (props) => {
                         <input className="form-control f-12 loginInput" type="password" placeholder="Enter Password" name="password" value={fieldobj.password} onChange={(e) => handleChange(e)}/>
                     </div>
                     <div className="col-md-12">
-                        <p className="f-12"><span className="mdi mdi-check"></span> By creating an account you are agreeing to our <strong>Terms of Service</strong> and <strong>Privacy Policy</strong></p></div>
+                        <p className="f-12"><span className="mdi mdi-check"></span> By creating an account you are agreeing to our <strong><a href="https://www.notion.so/joinguppy/Terms-of-Services-05d20bf0aebc4c8bbf435edd8d429a13" target="_blank">Terms of Service</a></strong> and <strong><a href="https://www.notion.so/joinguppy/Privacy-Policy-77c1bac7873f46868a410b109e1312c4" target="_blank">Privacy Policy</a></strong></p></div>
                     <div className="col-md-12 text-center">
                         <button type="submit"  className="btn btn-primary d-block shadow loginButton" disabled={props.login_user_loading}>Register</button>
                         <Link className="loginLink" to="/#login"> Already have a store? <strong>Log in</strong></Link>

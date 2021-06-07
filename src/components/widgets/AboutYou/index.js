@@ -2,6 +2,7 @@ import React , { useState } from "react";
 import "./register.css";
 import validateUtility from "../../../utils/ValidateUtility"
 import { Link } from "react-router-dom";
+import Logo from '../../../assets/img/logo.png'
 
 const Register = (props) => {
     const [fieldobj , setFieldObj] = useState({ userName : "",  email : "manish.kumar212111@gmail.com" , password : "Password@123" });
@@ -67,7 +68,7 @@ const Register = (props) => {
             <div className="container d-flex align-items-center">
 
               <div className="logo mr-auto">
-                <h1><a href="index.html"><span>Superfruit</span></a></h1>
+                <img src={Logo} alt="logo"/>
               </div>
 
            
