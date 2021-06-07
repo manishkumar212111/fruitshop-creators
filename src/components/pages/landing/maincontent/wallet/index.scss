@@ -1,11 +1,12 @@
 .wallet-card {
     width: 70%;
-    height: 300px;
+    height: 761px;
     padding: 20px 35px;
     background: #FFFFFF;
     border: 1px solid #D8B491;
+    border-left: none;
     box-sizing: border-box;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
     .title {
@@ -16,17 +17,16 @@
     }
     .description {
         font-size: 15px;
-        margin-bottom: 60px;
     }
     .description-part {
         font-size: 15px;
         margin-bottom: 30px;
-        margin-bottom: auto;
+        margin-bottom: 50px;
     }
     .custom-button {
         background: #000000;
         border-radius: 5px;
-        margin-bottom: auto;
+        margin-bottom: 50px;
         color: #FFFFFF;
         font-size: 18px;
         border: none;
@@ -40,5 +40,7 @@
 @media (max-width: 768px) {
     .wallet-card {
         width: 100%;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25) !important;
+        border-top: none;
     }
 }

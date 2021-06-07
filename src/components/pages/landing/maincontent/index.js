@@ -30,7 +30,7 @@ const MainContent = () => {
             {selectedTab === "theme" && <Theme />}
             {selectedTab === "wallet" && <Wallet />}
         </div> 
-        {selectedTab === "product" && <ProductListing productList={productList}/>}
+        <ProductListing productList={productList}/>
         </>
     )
 }

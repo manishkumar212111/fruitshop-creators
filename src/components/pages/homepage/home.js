@@ -93,6 +93,10 @@ const Homepage = (props) => {
         props.sendResetLink(field);
     }
 
+    const gotoRegister = () => {
+      history.push("/#register")
+    }
+
     return(
 
       <div className="home">
@@ -108,7 +112,7 @@ const Homepage = (props) => {
               <p className="description">
                 Find and sell brands from top retailers immediately. $0 to get started.
               </p>
-              <button>JOIN SUPERFRUIT FREE</button>
+              <button onClick={gotoRegister}>JOIN SUPERFRUIT FREE</button>
             </div>
             <div>
               <img src={BannerImg3}  alt=""/>

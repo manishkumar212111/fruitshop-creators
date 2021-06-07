@@ -27,11 +27,13 @@ const MarketPlaceDetail = (props) => {
         history.push("/marketplace")
     }
 
+    console.log("fffffffffff", productDetail)
+
     return(
         <>
-        <div className="return-to-store" onClick={gotoMarketPlace}>
+        {/* <div className="return-to-store" onClick={gotoMarketPlace}>
             Return To SuperFruit Marketplace
-        </div>
+        </div> */}
         <div className='menu'>
             <ul>
                 <li>Free shipping on orders over $30</li>
@@ -48,6 +50,7 @@ const MarketPlaceDetail = (props) => {
                 <p className="title">{productDetail.productName && productDetail.productName}</p>
                 <p className="price">${productDetail.price}</p>
                 <p className="author">{productDetail.brandName && productDetail.brandName}</p>
+                <p className="author">{productDetail.sold_at && productDetail.sold_at}</p>
                 <div className="buy_now">
                 <button onClick={handleDuplicate} disabled={props.duplicating_product}>Add To Store</button>
                 </div>

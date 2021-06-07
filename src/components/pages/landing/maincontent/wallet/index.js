@@ -10,9 +10,12 @@ const ProductSetting = () => {
         <div className="wallet-card">
             <p className="title">Wallet</p>
             <p className="description">Set up your wallet and start earning</p>
-            <p className="description-part">Set up your wallet and start earning</p>
-            {/* <button className="custom-button">Go to Stripe</button> */}
-            <p className="support-description">View your analytics is *coming soon*. In the mean time, you can request a custom report from support@superfruit.app.</p>
+            <p className="description">
+                <ul>
+                    <li>Get paid through Stripe. Check your welcome email to sign up.</li>
+                    <li>View your analytics is coming soon. In the mean time, you can request a custom report from support@superfruit.app</li>
+                </ul>
+            </p>
         </div>
     )
 }

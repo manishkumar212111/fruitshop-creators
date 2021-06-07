@@ -37,6 +37,7 @@ const CustomListing = (props) => {
     const [productID] = useState(props.match.params.id ? props.match.params.id : "");
     const [fields , setFields] = useState(props.fields);
     const [error , setError] = useState(false);
+    const [checkSuperFruitProduct, setCheckSuperFruitProduct] = useState(false);
     const CKeditorConfig = {
         height: 100,
         toolbar: [
@@ -89,6 +90,11 @@ const CustomListing = (props) => {
                 imgUrl :props.productDetail.imgUrl,
                 imageType : props.productDetail.imageType,
         };
+        if (props.productDetail.originalProductId) {
+            setCheckSuperFruitProduct(true)
+        } else {
+            setCheckSuperFruitProduct(false)
+        }
         setFields(detail)}
     } , [props.productDetail, productID]);
 
@@ -142,20 +148,23 @@ const CustomListing = (props) => {
                     <button className="save-button" onClick={handleSubmit}>Save</button>
                 </div>
                 <div className="listing-card">
-                    <div className="left-group">
-                        <p className="title">{productID ? "Edit your" : "Add a"} custom listing</p>
-                        <label>Brand Name</label><br/>
-                        <input type="text" value={fields.brandName} placeholder="Brand Name" onChange={(e) => handleChange(e , 'brandName')} ></input><br/>
-                        <label>Product Name</label><br/>
-                        <input type="text" value={fields.productName} placeholder="Product Name" onChange={(e) => handleChange(e , 'productName')} /><br/>
-                        <label>Price</label><br/>
-                        <input type="number" value={fields.price} placeholder="Price" onChange={(e) => handleChange(e , 'price')} ></input><br/>
-                        <label>Promo Code(Optional)</label><br/>
-                        <input type="text" value={fields.promoCode} placeholder="Promo Code" onChange={(e) => handleChange(e , 'promoCode')} ></input><br/>
-                        <label>https://url</label><br/>
-                        <input type="text" value={fields.url} placeholder="Product url" onChange={(e) => handleChange(e , 'url')} ></input>
-                    </div>
+                    {!checkSuperFruitProduct &&
+                        <div className="left-group">
+                            <p className="title">{productID ? "Edit your" : "Add a"} custom listing</p>
+                            <label>Brand Name</label><br/>
+                            <input type="text" value={fields.brandName} placeholder="Brand Name" onChange={(e) => handleChange(e , 'brandName')} ></input><br/>
+                            <label>Product Name</label><br/>
+                            <input type="text" value={fields.productName} placeholder="Product Name" onChange={(e) => handleChange(e , 'productName')} /><br/>
+                            <label>Price</label><br/>
+                            <input type="number" value={fields.price} placeholder="Price" onChange={(e) => handleChange(e , 'price')} ></input><br/>
+                            <label>Promo Code(Optional)</label><br/>
+                            <input type="text" value={fields.promoCode} placeholder="Promo Code" onChange={(e) => handleChange(e , 'promoCode')} ></input><br/>
+                            <label>https://url</label><br/>
+                            <input type="text" value={fields.url} placeholder="Product url" onChange={(e) => handleChange(e , 'url')} ></input>
+                        </div>
+                    }
                     <div className="right-group">
+                        {checkSuperFruitProduct && <p className="title">Edit your Superfruit Listing</p>}
                         <label>Product description (Optional)</label><br/>
                         <CKEditor
                             data={fields.productDescription ? fields.productDescription.replaceAll('&lt;','<') : ""}

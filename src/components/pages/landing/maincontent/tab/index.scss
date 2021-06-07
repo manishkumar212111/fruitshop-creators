@@ -1,7 +1,6 @@
 .tab-wrapper {
     display: flex;
     flex-direction: column;
-    border: 1px solid #D8B491;
     border-bottom: none;
     width: 30%;
     .tab {
@@ -9,7 +8,7 @@
         align-items: center;
         justify-content: left;
         padding: 20px;
-        border-bottom: 1px solid #D8B491;
+        border: 1px solid #D8B491;
         cursor: pointer;
         .tab-icon {
             width: 20px;
@@ -17,13 +16,14 @@
         }
         .tab-title {
             font-family: Montserrat;
-            font-size: 16px;
+            font-size: 14px;
             color: #000;
             margin-bottom: 0;
         }
     }
     .active-tab {
         background: #fff;
+        border-right: none !important;
     }
 }
 @media (max-width: 768px) {
@@ -31,6 +31,9 @@
         flex-direction: row;
         width: 100%;
         border-right: 0;
+        .active-tab {
+            border-bottom: none !important;
+        }
     }
     .tab {
         justify-content: center !important;

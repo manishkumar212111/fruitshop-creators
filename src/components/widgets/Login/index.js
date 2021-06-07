@@ -2,6 +2,7 @@ import React , { useState , useEffect , Fragment } from "react";
 import "./login.css";
 import validateUtility from "../../../utils/ValidateUtility"
 import { Link } from "react-router-dom";
+import Logo from '../../../assets/img/logo.png'
 const Login = ({SubmitCb, login_user_loading}) => {
     const [fieldobj , setFieldObj] = useState({ userName : "" , password : "" });
     const [errorObj , setErrorObj] = useState({ userName : { error : true , msg : "Please enter valid userName" } , 
@@ -55,7 +56,7 @@ const Login = ({SubmitCb, login_user_loading}) => {
             <div className="container d-flex align-items-center">
 
               <div className="logo mr-auto">
-                <h1><h1><a href="/"><span>Superfruit</span></a></h1></h1>
+                <img src={Logo} alt="logo"/>
               </div>
 
              {/* <div className="login">
@@ -76,7 +77,7 @@ const Login = ({SubmitCb, login_user_loading}) => {
                         <span className="error">{!errorObj.userName.error && errorObj.userName.msg}</span>
                             
                             {/* <Link className="loginLink" to="/#forgot"> Forgot username?</Link> */}
-                            <input className="form-control f-12 loginInput mt-1" type="text" placeholder="Enter UserName" name="userName" value={fieldobj.userName} onChange={(e) => handleChange(e)} />
+                            <input className="form-control f-12 loginInput mt-1" type="text" placeholder="Enter Username" name="userName" value={fieldobj.userName} onChange={(e) => handleChange(e)} />
                         </div>
                         <div className="col-md-12 form-group">
                             <span className="error">{!errorObj.password.error && errorObj.password.msg}</span>
