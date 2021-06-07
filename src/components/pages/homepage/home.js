@@ -98,6 +98,8 @@ const Homepage = (props) => {
       history.push("/#register")
     }
 
+    
+
     return(
 
       <div className="home">
@@ -131,7 +133,6 @@ const Homepage = (props) => {
             <img src="https://ik.imagekit.io/lcq5etn9k/productlisting/neiman-marcus_VRNNwR76p.png" alt="" />
             <img src="https://ik.imagekit.io/lcq5etn9k/productlisting/hot-topic_gBNl-ZAzWh.png" alt="" />
             <img src="https://ik.imagekit.io/lcq5etn9k/productlisting/erewhon_RQa3SALZd.png" alt="" />
-            <img src={Soko} alt=""></img>
           </Marquee>
           <div className="content">
             <div className="commerce">

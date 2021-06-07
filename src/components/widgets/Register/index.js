@@ -1,10 +1,11 @@
 import React , { useState , useEffect , Fragment } from "react";
 import "./register.css";
 import validateUtility from "../../../utils/ValidateUtility"
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Logo from '../../../assets/img/logo.png'
 
 const Register = (props) => {
+    const history = useHistory()
     const [fieldobj , setFieldObj] = useState({ userName : "",  email : "" , password : "" });
     const [errorObj , setErrorObj] = useState({ email : { error : true , msg : "Please enter valid email" } , 
                                                 password : { error : true , msg : "Password should be minimum 8 chars" },
@@ -55,6 +56,9 @@ const Register = (props) => {
     }
 
 
+    const gotoHome = () => {
+        history.push("/")
+      }
     return (
         <div>
 
@@ -64,7 +68,7 @@ const Register = (props) => {
             <div className="container d-flex align-items-center">
 
               <div className="logo mr-auto">
-                <img src={Logo} alt="logo"/>
+                <img src={Logo} alt="logo" onClick={gotoHome}/>
               </div>
 
            

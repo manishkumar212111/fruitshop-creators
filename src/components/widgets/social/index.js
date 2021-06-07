@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { categories } from "../../../configs";
+import Logo from '../../../assets/img/logo.png'
+
 const Index = (props) => {
+    const history = useHistory()
     const [categoryList , setCategoryList] = useState(categories);
     const [social_url , setSocialUrl] = useState(props.social_url);
     const [showSocial , setShowSocial] = useState(true);
@@ -27,6 +30,9 @@ const Index = (props) => {
         setCategory(tm => tmp);
     }
 
+    const gotoHome = () => {
+        history.push("/")
+      }
     return (
         <div className="loginPopup">
                     <div className="popupContainer">
@@ -34,7 +40,7 @@ const Index = (props) => {
                         <div className="container d-flex align-items-center">
 
                         <div className="logo mr-auto">
-                            <h1><a href="/"><span>Superfruit</span></a></h1>
+                <img src={Logo} alt="logo" onClick={gotoHome}/>
                         </div>
                         </div>
                     </header>

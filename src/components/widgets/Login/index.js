@@ -1,9 +1,10 @@
 import React , { useState , useEffect , Fragment } from "react";
 import "./login.css";
 import validateUtility from "../../../utils/ValidateUtility"
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Logo from '../../../assets/img/logo.png'
 const Login = ({SubmitCb, login_user_loading}) => {
+    const history = useHistory()
     const [fieldobj , setFieldObj] = useState({ userName : "" , password : "" });
     const [errorObj , setErrorObj] = useState({ userName : { error : true , msg : "Please enter valid userName" } , 
                                                 password : { error : true , msg : "Please enter valid password" } })
@@ -48,6 +49,9 @@ const Login = ({SubmitCb, login_user_loading}) => {
 
     }
 
+    const gotoHome = () => {
+        history.push("/")
+      }
     
     return (
         <div className="loginPopup">
@@ -56,7 +60,7 @@ const Login = ({SubmitCb, login_user_loading}) => {
             <div className="container d-flex align-items-center">
 
               <div className="logo mr-auto">
-                <img src={Logo} alt="logo"/>
+                <img src={Logo} alt="logo" onClick={gotoHome}/>
               </div>
 
              {/* <div className="login">
