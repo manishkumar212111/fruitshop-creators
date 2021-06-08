@@ -168,7 +168,7 @@ export const updateProductById = (productId , data) => dispatch =>{
       API.post('ProductOpen' , {} , productId , function(res){
         if(res && res.data) {
           console.log("ffffffffffff")
-            dispatch(setAlert("Product added" , 'success'));
+            // dispatch(setAlert("Product added" , 'success'));
           } else {
               //''
               res && res.data && dispatch(setAlert(res.data.message , 'danger'));    
