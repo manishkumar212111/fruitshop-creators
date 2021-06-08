@@ -41,7 +41,7 @@ class Layout extends React.Component {
           case "info":
             return toast.info(message, configs);
           case "success":
-            return toast.success(message, configs);
+            // return toast.success(message, configs);
           case "warning":
             return toast.warn(message, configs);
           case "danger":
