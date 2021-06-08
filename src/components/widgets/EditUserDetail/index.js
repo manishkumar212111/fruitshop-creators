@@ -111,16 +111,16 @@ const EditUserDetail = (props) => {
         
         // <div className="container">
         //         <span onClick={() => {props.closeCb(false)}}>close</span>
-        //         <label for="uname"><b>First Name</b></label>
+        //         <label htmlFor="uname"><b>First Name</b></label>
         //             <span className="error">{!errorObj.first_name.error && errorObj.first_name.msg}</span>
         //             <input type="text" placeholder="Enter First Name" name="first_name" value={fieldobj.first_name} onChange={(e) => handleChange(e)} required />
-        //         <label for="uname"><b>Last Name</b></label>
+        //         <label htmlFor="uname"><b>Last Name</b></label>
         //             <span className="error">{!errorObj.last_name.error && errorObj.last_name.msg}</span>
         //             <input type="text" placeholder="Enter Last Name" name="last_name" value={fieldobj.last_name} onChange={(e) => handleChange(e)} required />
-        //         <label for="uname"><b>Email</b></label>
+        //         <label htmlFor="uname"><b>Email</b></label>
         //             <span className="error">{!errorObj.email.error && errorObj.email.msg}</span>
         //             <input type="text" placeholder="Enter Email" name="email" value={fieldobj.email} onChange={(e) => handleChange(e)} disabled required />
-        //         <label for="psw"><b>Date of birth</b></label>
+        //         <label htmlFor="psw"><b>Date of birth</b></label>
                     
         //             <DatePicker
         //                     selected={fieldobj.dob ? new Date(fieldobj.dob) : ""}

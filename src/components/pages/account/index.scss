@@ -1,0 +1,103 @@
+.accoundMain {
+    
+    margin-top:110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+    
+    .account {
+        display: flex;
+        flex-direction: column;
+    
+        .header{
+            font-size: 27px;
+            font-weight: bold;
+            color: #000;
+            margin-top: 20px;
+        }
+    
+        .editIc{
+            cursor:pointer;
+            color:#9E9E9E;
+            margin-left:10px;
+    
+            &:hover{
+            color:#000;
+            }
+        }
+        div.medtxt {
+                font-size: 14px;
+                color: #000;
+                font-size: 21px;
+    
+            .label {
+                font-weight: 700;            
+            }
+    
+            input.roundedInput{
+                background: #FFFFFF;
+                border: 3px solid #000000;
+                box-sizing: border-box;
+                border-radius: 26px;
+                color: #000;
+                height: 42px;
+                padding: 0px 30px;
+                font-size:16px;
+                margin-left:10px;
+            }
+    
+            .cancelIc{
+                color:red;
+                cursor:pointer;
+                margin-left:15px;
+            }
+    
+            .submitIc{
+                color:green;
+                cursor:pointer;
+                margin-left:15px;
+            }
+        }
+    
+        button {
+            border: none;
+            outline: unset;
+            background-color: #DFDFDF;
+            padding: 8px 30px 8px 30px;
+            border-radius: 25px;
+            margin-top: 20px;
+            font-weight:700;
+        }
+    
+        .deleteAccount {
+            background-color: #FC3C00;
+            color:white;
+        }
+    
+}    
+    @media (max-width: 767px) {
+        .accoundMain{
+            margin-top: 130px;
+            .account button {width: 100%;}
+    
+            .account div.medtxt input.roundedInput {
+                font-size: 12px;
+                margin-left: 5px;
+                margin-top: -10px;
+                height:40px;
+            }
+    
+            .account div.medtxt .submitIc, .account div.medtxt .cancelIc  {
+                margin-left: 10px;
+            }
+    
+            .account div.medtxt {
+                font-size: 14px;
+                    padding-bottom: 5px;
+            }
+        } 
+    }
+
+}   

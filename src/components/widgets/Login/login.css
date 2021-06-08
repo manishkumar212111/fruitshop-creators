@@ -65,6 +65,7 @@
 	width: 100%;
 	margin-bottom: 20px;
 	height: 44px;
+	color: #fff !important;
 }
 
 .sellPlanBtn, .sellPlanBtn:hover, .sellPlanBtn:focus, .sellPlanBtn:active{
@@ -97,7 +98,7 @@
 	font-weight: bold;
 	font-size: 35px;
 	line-height: 43px;
-	color: #8C52FF;
+	color: #000;
 }
 
 #header .logo h1 {

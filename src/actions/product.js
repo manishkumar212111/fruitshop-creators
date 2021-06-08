@@ -8,7 +8,6 @@ export const getProductByUserId = (productId) => dispatch =>{
           data : true
       })
     API.get('Product' , {}, productId , function(res){
-      
       if(res && res.data){
           dispatch( { type: "PRODUCT_LISTING",
             data : res.data
@@ -93,11 +92,8 @@ export const updateProductById = (productId , data) => dispatch =>{
       API.patch('ProductOpen' , data , productId , function(res){
         
         if(res && res.data.id) {
-            dispatch(setAlert("Details updated successfully" , 'success'));    
-            setTimeout(() => {
-              window.location.href="/home/listing";
-            }, 500)
-            
+            dispatch(setAlert("Details updated successfully" , 'success'))
+            window.location.href="/landing"
           } else {
               //''
               res && res.data && dispatch(setAlert(res.data.message , 'danger'));    
@@ -145,10 +141,8 @@ export const updateProductById = (productId , data) => dispatch =>{
       API.post('ProductOpen' , data , '' , function(res){
         if(res && res.data && res.data.id) {
             // dispatch(getProductByUserId());
-            dispatch(setAlert("Product added" , 'success'));
-            setTimeout(() => {
-              window.location.href="/home/listing";
-            }, 1000)
+            dispatch(setAlert("Product added" , 'success'))
+            window.location.href="/landing"
           } else {
               //''
               res && res.data && dispatch(setAlert(res.data.message , 'danger'));    
@@ -172,8 +166,9 @@ export const updateProductById = (productId , data) => dispatch =>{
         data : true
       })
       API.post('ProductOpen' , {} , productId , function(res){
-        if(res && res.data && res.data.id) {
-            dispatch(setAlert("Product added" , 'success'));
+        if(res && res.data) {
+          console.log("ffffffffffff")
+            // dispatch(setAlert("Product added" , 'success'));
           } else {
               //''
               res && res.data && dispatch(setAlert(res.data.message , 'danger'));    

@@ -53,14 +53,14 @@ const ChangePassword = (props) => {
         <div className="login-container">
             <span onClick={() => props.closeCb(false)}>Close</span>    
             <div className=" container">
-                <label for="uname"><b>Your Old password</b></label>
+                <label htmlFor="uname"><b>Your Old password</b></label>
                     <span className="error">{!errorObj.old_password.error && errorObj.old_password.msg}</span>
                     <input type="password" placeholder="Enter Password" name="old_password" value={fieldobj.old_password} onChange={(e) => handleChange(e)} required />
                 
-                <label for="uname"><b>Your New password</b></label>
+                <label htmlFor="uname"><b>Your New password</b></label>
                     <span className="error">{!errorObj.password.error && errorObj.password.msg}</span>
                     <input type="password" placeholder="Enter Password" name="password" value={fieldobj.password} onChange={(e) => handleChange(e)} required />
-                <label for="uname"><b>Repeat your password</b></label>
+                <label htmlFor="uname"><b>Repeat your password</b></label>
                     <span className="error">{!errorObj.repeat_password.error && errorObj.repeat_password.msg}</span>
                     <input type="password" placeholder="Enter Password" name="repeat_password" value={fieldobj.repeat_password} onChange={(e) => handleChange(e)} required />
                 

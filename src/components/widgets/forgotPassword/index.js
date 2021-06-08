@@ -1,8 +1,11 @@
 import React , { useState , useEffect , Fragment } from "react";
 import validateUtility from "../../../utils/ValidateUtility"
+import Logo from '../../../assets/img/logo.png'
+import { Link, useHistory } from "react-router-dom";
 
 const ForgotPassword = (props) => {
-    const [fieldobj , setFieldObj] = useState({ email : "manish.kumar212111@gmail.com"});
+    const history = useHistory()
+    const [fieldobj , setFieldObj] = useState({ email : ""});
     const [errorObj , setErrorObj] = useState({ email : { error : true , msg : "Please enter valid email" } })
     const validateField = (key , value) => {
         value = value ? value : fieldobj[key] 
@@ -41,6 +44,9 @@ const ForgotPassword = (props) => {
         props.SubmitCb(fieldobj)  
 
     }
+    const gotoHome = () => {
+        history.push("/")
+      }
     return (
         <div className="loginPopup">
         <div className="popupContainer">
@@ -48,7 +54,7 @@ const ForgotPassword = (props) => {
             <div className="container d-flex align-items-center">
 
               <div className="logo mr-auto">
-                <h1><a href="index.html"><span>Superfruit</span></a></h1>
+                <img src={Logo} alt="logo" onClick={gotoHome}/>
               </div>
 
              {/* <div className="login">

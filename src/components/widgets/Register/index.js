@@ -1,9 +1,11 @@
 import React , { useState , useEffect , Fragment } from "react";
 import "./register.css";
 import validateUtility from "../../../utils/ValidateUtility"
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import Logo from '../../../assets/img/logo.png'
 
 const Register = (props) => {
+    const history = useHistory()
     const [fieldobj , setFieldObj] = useState({ userName : "",  email : "" , password : "" });
     const [errorObj , setErrorObj] = useState({ email : { error : true , msg : "Please enter valid email" } , 
                                                 password : { error : true , msg : "Password should be minimum 8 chars" },
@@ -54,6 +56,9 @@ const Register = (props) => {
     }
 
 
+    const gotoHome = () => {
+        history.push("/")
+      }
     return (
         <div>
 
@@ -63,7 +68,7 @@ const Register = (props) => {
             <div className="container d-flex align-items-center">
 
               <div className="logo mr-auto">
-                <h1><a href="/"><span>Superfruit</span></a></h1>
+                <img src={Logo} alt="logo" onClick={gotoHome}/>
               </div>
 
            
@@ -90,7 +95,7 @@ const Register = (props) => {
                         <input className="form-control f-12 loginInput" type="password" placeholder="Enter Password" name="password" value={fieldobj.password} onChange={(e) => handleChange(e)}/>
                     </div>
                     <div className="col-md-12">
-                        <p className="f-12"><span className="mdi mdi-check"></span> By creating an account you are agreeing to our <strong>Terms of Service</strong> and <strong>Privacy Policy</strong></p></div>
+                        <p className="f-12"><span className="mdi mdi-check"></span> By creating an account you are agreeing to our <strong><a href="https://www.notion.so/joinguppy/Terms-of-Services-05d20bf0aebc4c8bbf435edd8d429a13" target="_blank">Terms of Service</a></strong> and <strong><a href="https://www.notion.so/joinguppy/Privacy-Policy-77c1bac7873f46868a410b109e1312c4" target="_blank">Privacy Policy</a></strong></p></div>
                     <div className="col-md-12 text-center">
                         <button type="submit"  className="btn btn-primary d-block shadow loginButton" disabled={props.login_user_loading}>Register</button>
                         <Link className="loginLink" to="/#login"> Already have a store? <strong>Log in</strong></Link>

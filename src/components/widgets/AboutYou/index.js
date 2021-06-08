@@ -1,9 +1,11 @@
-import React , { useState , useEffect , Fragment } from "react";
+import React , { useState } from "react";
 import "./register.css";
 import validateUtility from "../../../utils/ValidateUtility"
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import Logo from '../../../assets/img/logo.png'
 
 const Register = (props) => {
+    const history = useHistory()
     const [fieldobj , setFieldObj] = useState({ userName : "",  email : "manish.kumar212111@gmail.com" , password : "Password@123" });
     const [errorObj , setErrorObj] = useState({ email : { error : true , msg : "Please enter valid email" } , 
                                                 password : { error : true , msg : "Please enter valid password" },
@@ -55,6 +57,10 @@ const Register = (props) => {
     const loginCb = (token) => {
         props.googleLoginCb(token);
     }
+    
+    const gotoHome = () => {
+        history.push("/")
+      }
 
     return (
         <div>
@@ -67,7 +73,7 @@ const Register = (props) => {
             <div className="container d-flex align-items-center">
 
               <div className="logo mr-auto">
-                <h1><a href="index.html"><span>Superfruit</span></a></h1>
+                <img src={Logo} alt="logo" onClick={gotoHome}/>
               </div>
 
            

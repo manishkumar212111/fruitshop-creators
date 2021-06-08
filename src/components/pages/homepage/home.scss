@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+.home {
+    margin-top: 90px;
+    font-family: "Montserrat", sans-serif;
+  .banner {
+    padding: 85px 148px 136px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & > div {
+      &:first-child {
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        img {
+          &:last-child {
+            margin-top: 11px;
+            margin-left: 100px;
+          }
+        }
+      }
+
+      &.main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title {
+          font: {
+            size: 55px;
+            weight: 600;
+          }
+          text-align: center;
+          margin-bottom: 33px;
+        }
+
+        .description {
+          font: {
+            family: "Roboto";
+            size: 21px;
+            weight: 300;
+          }
+          text-align: center;
+          margin-bottom: 74px;
+        }
+
+        button {
+          width: 323px;
+          height: 68px;
+          border: 1px solid #000;
+          color: #000;
+          background: none;
+
+          font: {
+            family: "Roboto";
+            size: 20px;
+            weight: 300;
+          }
+        }
+      }
+
+      &:last-child {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        align-items: flex-start;
+        img {
+          &:first-child {
+            margin-bottom: 11px;
+            margin-left: 100px;
+          }
+        }
+      }
+    }
+  }
+
+  .sponsors {
+    width: 100%;
+    height: 180px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    img {
+      margin: 0 45px;
+    }
+  }
+
+  .content {
+    padding: 155px 233px;
+    .commerce {
+      display: flex;
+      margin-bottom: 150px;
+
+      .title {
+        flex-shrink: 0;
+        width: 100%;
+        max-width: 620px;
+        font: {
+          size: 45px;
+          weight: 600;
+        }
+      }
+
+      .description {
+        font: {
+          family: "Roboto";
+          size: 18px;
+          weight: 300;
+        }
+      }
+    }
+
+    .superfruit {
+      display: flex;
+      justify-content: space-between;
+
+      .left {
+        flex-shrink: 0;
+        width: 100%;
+        max-width: 540px;
+        padding-right: 100px;
+        box-sizing: border-box;
+
+        .title {
+          margin-bottom: 30px;
+          font: {
+            size: 45px;
+            weight: 600;
+          }
+        }
+
+        .description {
+          font: {
+            family: "Roboto";
+            size: 18px;
+            weight: 300;
+          }
+        }
+      }
+
+      .right {
+        display: flex;
+
+        .col {
+          &:first-child {
+            margin-right: 54px;
+          }
+
+          &:last-child {
+            margin-top: 130px;
+            margin-left: 54px;
+          }
+          .item {
+            width: 100%;
+            margin-bottom: 60px;
+
+            img {
+              width: 100%;
+              margin-bottom: 23px;
+            }
+
+            .title {
+              font: {
+                family: "Roboto";
+                size: 22px;
+              }
+              margin-bottom: 12px;
+            }
+
+            ul {
+              margin: 0;
+              padding: 0;
+
+              li {
+                list-style-position: inside;
+                font: {
+                  family: "Roboto";
+                  size: 17px;
+                  weight: 300;
+                }
+                color: 757575;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+
+    .main {
+      padding: 360px 0;
+      text-align: center;
+
+      font: {
+        size: 60px;
+        weight: 600;
+      }
+      color: #000;
+    }
+
+    ul {
+      padding: 40px 0;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+
+      li {
+        list-style-type: none;
+        a {
+          margin: 0 20px;
+          text-decoration: none;
+          font: {
+            size: 13px;
+            weight: 500;
+          }
+          color: #979797;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+    .home {
+      .banner {
+        padding: 85px 60px 136px;
+      }
+  
+      .content {
+        .commerce {
+          flex-direction: column;
+  
+          .title {
+            margin-bottom: 37px;
+          }
+        }
+  
+        .superfruit {
+          flex-direction: column;
+  
+          .left {
+            margin-bottom: 37px;
+            padding-right: 0 !important;
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 1440px) {
+    .home {
+  
+      .banner {
+        img {
+          width: 150px;
+        }
+        & > div {
+          &:first-child {
+            img {
+              &:last-child {
+                margin-left: 70px;
+              }
+            }
+          }
+  
+          &:last-child {
+            img {
+              &:first-child {
+                margin-left: 70px;
+              }
+            }
+          }
+        }
+  
+        .title {
+          font-size: 45px !important;
+          margin-bottom: 20px !important;
+        }
+  
+        .description {
+          font-size: 16px !important;
+          margin-bottom: 20px !important;
+        }
+  
+        button {
+          width: 250px !important;
+          height: 50px !important;
+          font-size: 16px !important;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .home {
+  
+      .banner {
+        & > div {
+          &:first-child,
+          &:last-child {
+            display: none;
+          }
+        }
+      }
+  
+      .content {
+        padding: 64px 25px !important;
+      }
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .home {
+      .banner {
+        padding: 40px 20px;
+  
+        .title {
+          text-align: left !important;
+          margin-bottom: 27px !important;
+        }
+  
+        .description {
+          text-align: left !important;
+          font-size: 26px !important;
+          margin-bottom: 57px !important;
+        }
+  
+        button {
+          max-width: 352px;
+          width: 100% !important;
+          background: #000 !important;
+          color: #fff !important;
+          height: 50px !important;
+          font-size: 20px !important;
+        }
+      }
+  
+      .sponsors {
+        height: 104px;
+  
+        img {
+          margin: 0 28px;
+        }
+      }
+  
+      .content {
+        .superfruit {
+          .right {
+            width: 100%;
+            .col {
+              &:first-child {
+                width: 100%;
+                margin-right: 0;
+                .item {
+                  &:last-child {
+                    display: none;
+                  }
+                }
+              }
+  
+              &:last-child {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+      .footer {
+        .main {
+          padding: 254px 25px;
+          font-size: 45px;
+        }
+  
+        ul {
+          padding: 24px 0 !important;
+        }
+      }
+    }
+  }

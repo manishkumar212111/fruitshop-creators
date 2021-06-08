@@ -2,15 +2,15 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat';
   color: #000000;
   background-color: #EED9C3;
 }
 
 a {
   color: #007bff;
-  font-family: 'Roboto', sans-serif;
 }
 
 a:hover {
@@ -19,7 +19,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6, .font-primary {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat';
 }
 
 @media (min-width: 1600px) {
@@ -70,7 +70,6 @@ h1, h2, h3, h4, h5, h6, .font-primary {
     display: flex;
     background-color: #ffffff;
     color: #000000;
-    font-family: 'Roboto', sans-serif;
     font-size: 15px;
     width: 98px;
     height: 29px;
@@ -131,6 +130,11 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
+#header.header-yellow-bg {
+  background: #EED9C3;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
 #header .logo h1 {
   font-size: 40px;
   margin: 0;
@@ -149,7 +153,6 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   display: flex;
   background-color: #000000;
   color: #ffffff;
-  font-family: 'Roboto', sans-serif;
   font-size: 15px;
   width: 98px;
   height: 29px;
@@ -228,7 +231,6 @@ section.second-section {
 }
 .section-title {
   font-weight: 400;
-  font-family: 'Roboto', sans-serif;
   font-size: 26px;
 }
 .sec-text {

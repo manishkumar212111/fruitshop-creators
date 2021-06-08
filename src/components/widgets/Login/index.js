@@ -1,8 +1,10 @@
 import React , { useState , useEffect , Fragment } from "react";
 import "./login.css";
 import validateUtility from "../../../utils/ValidateUtility"
-import { Link } from "react-router-dom";
-const Login = (props) => {
+import { Link, useHistory } from "react-router-dom";
+import Logo from '../../../assets/img/logo.png'
+const Login = ({SubmitCb, login_user_loading}) => {
+    const history = useHistory()
     const [fieldobj , setFieldObj] = useState({ userName : "" , password : "" });
     const [errorObj , setErrorObj] = useState({ userName : { error : true , msg : "Please enter valid userName" } , 
                                                 password : { error : true , msg : "Please enter valid password" } })
@@ -43,11 +45,13 @@ const Login = (props) => {
         setErrorObj( errorOb => ( { ...errorOb , errOb}))
         if(!status)
             return;
-        
-        props.SubmitCb(fieldobj)  
+        SubmitCb(fieldobj)  
 
     }
 
+    const gotoHome = () => {
+        history.push("/")
+      }
     
     return (
         <div className="loginPopup">
@@ -56,7 +60,7 @@ const Login = (props) => {
             <div className="container d-flex align-items-center">
 
               <div className="logo mr-auto">
-                <h1><h1><a href="/"><span>Superfruit</span></a></h1></h1>
+                <img src={Logo} alt="logo" onClick={gotoHome}/>
               </div>
 
              {/* <div className="login">
@@ -77,7 +81,7 @@ const Login = (props) => {
                         <span className="error">{!errorObj.userName.error && errorObj.userName.msg}</span>
                             
                             {/* <Link className="loginLink" to="/#forgot"> Forgot username?</Link> */}
-                            <input className="form-control f-12 loginInput mt-1" type="text" placeholder="Enter UserName" name="userName" value={fieldobj.userName} onChange={(e) => handleChange(e)} />
+                            <input className="form-control f-12 loginInput mt-1" type="text" placeholder="Enter Username" name="userName" value={fieldobj.userName} onChange={(e) => handleChange(e)} />
                         </div>
                         <div className="col-md-12 form-group">
                             <span className="error">{!errorObj.password.error && errorObj.password.msg}</span>
@@ -85,7 +89,7 @@ const Login = (props) => {
                         </div>
 
                         <div className="col-md-12 text-right">
-                            <button type="submit" href="#" className={`btn btn-primary d-block shadow loginButton loginLink`} disabled={props.login_user_loading} >Login</button> 
+                            <button type="submit" href="#" className={`btn btn-primary d-block shadow loginButton loginLink`} disabled={login_user_loading} >Login</button> 
                         </div>
                         {/* <div className="col-md-12"><div className="option text-center"><span>or</span></div></div> */}
                         <div className="col-md-12 text-center">
@@ -106,10 +110,10 @@ const Login = (props) => {
         // <div className="login-container">  
         //     <GoogleLoginButton loginCb = {loginCb}/>  
         //     <div className="container">
-        //         <label for="uname"><b>Email</b></label>
+        //         <label htmlFor="uname"><b>Email</b></label>
         //             <span className="error">{!errorObj.userName.error && errorObj.userName.msg}</span>
         //             <input type="text" placeholder="Enter Email" name="userName" value={fieldobj.userName} onChange={(e) => handleChange(e)} required />
-        //         <label for="psw"><b>Password</b></label>
+        //         <label htmlFor="psw"><b>Password</b></label>
         //             <span className="error">{!errorObj.password.error && errorObj.password.msg}</span>
         //             <input type="password" placeholder="Enter Password" name="password" value={fieldobj.password} onChange={(e) => handleChange(e)} required />
         //         <button type="submit" onClick={handleClick}>Login</button>
