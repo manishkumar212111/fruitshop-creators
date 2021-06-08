@@ -158,17 +158,15 @@ const Homepage = (props) => {
                   Superfruit is for everyone
                 </p>
                 <p className="description">
-                We make commerce better for everyone, so owners can focus on what they do best — growing their business with unparrelled creativity, speed, and drive.
+                We make commerce better for everyone, so owners can focus on what they do best — growing their business with unparalleled creativity, speed, and drive.
                 </p>
               </div>
               {isMobile ? 
               <div className="mobileSwiper">
                 <Swiper
                   spaceBetween={0}
-                  slidesPerView={1}
+                  slidesPerView={1.15}
                   loop={true}
-                  onSlideChange={() => console.log('slide change')}
-                  onSwiper={(swiper) => console.log(swiper)}
                 >
                   <SwiperSlide>
                     <div className="item">
