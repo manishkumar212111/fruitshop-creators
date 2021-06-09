@@ -115,7 +115,7 @@ const CustomListing = (props) => {
         });    
     }
     const handleSubmit = () => {
-        const requireArr = ['brandName' , 'productName' , 'productDescription' , 'url' , 'imgUrl' , 'price'];
+        const requireArr = ['brandName' , 'productName'  , 'url' , 'imgUrl' , 'price'];
         let err = [];
         for(var i in requireArr){
             if(!fields[requireArr[i]]){
