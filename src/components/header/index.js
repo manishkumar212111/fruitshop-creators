@@ -67,8 +67,8 @@ const Header = (props) => {
               <img src={Logo} alt="logo"/>
               <ul>
                 <li>
-                  <a href="https://superfruit.formstack.com/forms/owners">For store owners</a>
-                  <a href="https://superfruit.formstack.com/forms/business">For vendors</a>
+                  <a href="https://superfruit.formstack.com/forms/owners">For creators</a>
+                  <a href="https://superfruit.formstack.com/forms/business">For brands</a>
                   <a href="https://superfruit.formstack.com/forms/support">For shoppers</a>
                 </li>
               </ul>
@@ -113,10 +113,10 @@ const Header = (props) => {
 
         <ul>
           <li>
-            <a href="https://superfruit.formstack.com/forms/owners"target="_blank">For store owners</a>
+            <a href="https://superfruit.formstack.com/forms/owners"target="_blank">For creators</a>
           </li>
           <li>
-            <a href="https://superfruit.formstack.com/forms/business"target="_blank">For vendors</a>
+            <a href="https://superfruit.formstack.com/forms/business"target="_blank">For brands</a>
           </li>
           <li>
             <a href=" https://superfruit.formstack.com/forms/support"target="_blank">For shoppers</a>

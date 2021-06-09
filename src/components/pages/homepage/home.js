@@ -110,10 +110,10 @@ const Homepage = (props) => {
             </div>
             <div className="main">
               <p className="title">
-                Starting your own retail business has never been easier
+              Starting a store for your brand has never been easier
               </p>
               <p className="description">
-                Design your own store with products from top retailers. No cost, no hassle, no risk.
+              Pick your favorite products from top retailers. Earn extra cash with every sale.
               </p>
               <button onClick={gotoRegister}>JOIN SUPERFRUIT FREE</button>
             </div>
@@ -138,18 +138,23 @@ const Homepage = (props) => {
             <div className="commerce">
               <p className="title">
                 Commerce<br/>
-                Transformed
+                Transformed For<br/>
+                Creators and Brands
               </p>
               <p className="description">
-                Superfruit is a place where those with high ambition come to build lasting businesses.<br/><br/>
-                We’ve transformed every aspect of commerce so our owners can earn more, dream more, and be more.
+                <b>CREATORS</b>
+                Superfruit helps creators monetize their content with commerce.
                 <ul>
-                  <li>Find and add products directly to your Superfruit store so you can start selling right away. We vetted thousands of brands from top retailers so you don’t have to. 
-</li>
-<li>Run your business without the hassle of managing vendors, inventory, packaging, or shipping. Products are directly sent from Superfruit to your customer in 2 to 14 days. </li>
-<li>Generate a healthy income with 20% profit on every sale. We also help with brand deals and collaborations to maximize how much you can earn.</li>
+                  <li>Curate your own retail shop with products you love.</li>
+                  <li>Earn 20% profit on every sale.</li>
+                  <li>No cost, no hassle, no risk.</li>
                 </ul><br/>
-                We empower more individuals to start a business by removing the obstacles to starting and running one. Learn more about how Superfruit works below:
+                <b>BRANDS</b>
+                Superfruit helps brands build a real relationship with creators.
+                <ul>
+                  <li>We initiate communication with creators you love. We enable deep and lasting partnerships.</li>
+                  <li>Leverage in-depth data to drive maximum campaign performance and sales.</li>
+                </ul>
               </p>
             </div>
             <div className="superfruit">
@@ -158,7 +163,7 @@ const Homepage = (props) => {
                   Superfruit is for everyone
                 </p>
                 <p className="description">
-                We make commerce better for everyone, so owners can focus on what they do best — growing their business with unparalleled creativity, speed, and drive.
+                We make commerce better for everyone, so creators and brands can focus on what they do best — growing with unparralleled creativity, speed, and drive.
                 </p>
               </div>
               {isMobile ? 
@@ -176,7 +181,7 @@ const Homepage = (props) => {
                       </p>
                       <ul>
                         <li>Create a store that looks and feels like you</li>
-                        <li>Curate your catalog with products you love</li>
+                        <li>Add products you love</li>
                         <li>Launch your business in minutes, not weeks</li>
                       </ul>
                     </div>
