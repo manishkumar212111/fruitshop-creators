@@ -110,7 +110,7 @@ const Homepage = (props) => {
             </div>
             <div className="main">
               <p className="title">
-              Starting a store for your brand has never been easier
+              Starting your own store<br className="line-blocker"/>has never been easier
               </p>
               <p className="description">
               Pick your favorite products from top retailers. Earn extra cash with every sale.
@@ -142,14 +142,14 @@ const Homepage = (props) => {
                 Creators and Brands
               </p>
               <p className="description">
-                <b>CREATORS</b>
+                <b>CREATORS</b><br/>
                 Superfruit helps creators monetize their content with commerce.
                 <ul>
                   <li>Curate your own retail shop with products you love.</li>
                   <li>Earn 20% profit on every sale.</li>
                   <li>No cost, no hassle, no risk.</li>
-                </ul><br/>
-                <b>BRANDS</b>
+                </ul><br/><br/>
+                <b>BRANDS</b><br/>
                 Superfruit helps brands build a real relationship with creators.
                 <ul>
                   <li>We initiate communication with creators you love. We enable deep and lasting partnerships.</li>

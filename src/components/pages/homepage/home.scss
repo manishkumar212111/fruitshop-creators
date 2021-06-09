@@ -302,6 +302,9 @@
   }
   
   @media (max-width: 1024px) {
+    .line-blocker {
+      display:none;
+    }
     .home {
   
       .banner {
