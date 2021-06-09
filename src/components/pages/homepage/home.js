@@ -144,11 +144,11 @@ const Homepage = (props) => {
               <p className="description">
                 <b>CREATORS</b><br/>
                 Superfruit helps creators monetize their content with commerce.
-                <ul>
+                <ul style={{marginBottom: 0}}>
                   <li>Curate your own retail shop with products you love.</li>
                   <li>Earn 20% profit on every sale.</li>
                   <li>No cost, no hassle, no risk.</li>
-                </ul><br/><br/>
+                </ul><br/>
                 <b>BRANDS</b><br/>
                 Superfruit helps brands build a real relationship with creators.
                 <ul>
