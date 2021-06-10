@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react"
 import './index.scss'
 import { getUserData , clearUserData} from "../../utils/globals"
 import { Link, useHistory } from "react-router-dom"
-import Logo from '../../assets/img/logo.png'
-import MobileLogo from '../../assets/img/mobile-logo.png'
+import Logo from '../../assets/img/d-logo.png'
+import MobileLogo from '../../assets/img/logo.png'
 import WhiteLogo from '../../assets/img/white-logo.svg'
 import SidebarIcon from '../../assets/img/hambuger.png'
 import CloseIcon from '../../assets/img/close.svg'
