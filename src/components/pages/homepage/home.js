@@ -110,7 +110,7 @@ const Homepage = (props) => {
             </div>
             <div className="main">
               <p className="title">
-              Starting your own store<br className="line-blocker"/>has never been easier
+              Starting your own store <br className="line-blocker"/>has never been easier
               </p>
               <p className="description">
               Pick your favorite products from top retailers. Earn extra cash with every sale.
