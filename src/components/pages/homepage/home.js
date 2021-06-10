@@ -87,7 +87,7 @@ const Homepage = (props) => {
             window.location.href='/landing';
             return;
         }
-        props.UpdateUserById(getUserData('id') , { social_url : social_url , category : category})
+        props.UpdateUserById(getUserData('id') , { social_url : social_url , category : category}, true)
     }
 
     const handleForgotPassword = (field) => {
