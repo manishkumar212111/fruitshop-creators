@@ -64,7 +64,7 @@ const Header = (props) => {
         <div className="header">
           <div className="desktop">
             <div className="left">
-              <img src={Logo} alt="logo"  style={{ "marginTop" : "-40px", width : "130px", height : "93px"}}/>
+              <img src={Logo} alt="logo"  style={{ "marginTop" : "0px", width : "130px", height : "71px"}}/>
               <ul>
                 <li>
                   <a href="https://superfruit.formstack.com/forms/owners">For creators</a>
@@ -79,7 +79,7 @@ const Header = (props) => {
             </div>
           </div>
           <div className="mobile">
-            <img src={MobileLogo} alt="" />
+            <img src={MobileLogo} alt="" style={{ "marginTop" : "0px", width : "130px", height : "93px"}}/>
             <img src={SidebarIcon} onClick={() => toggleSidebarMenu()} alt=""/>
           </div>
         </div>
@@ -89,7 +89,7 @@ const Header = (props) => {
         <div className="header-wrapper">
           <img src={Logo} className="desktop-logo" onClick={gotoLanding} alt="" style={{ "marginTop" : "-40px", width : "130px", height : "93px"}}></img>
           <img src={MobileLogo} style={{ "marginTop" : "-41px", width : "172px", height : "128px"}} className="mobile-logo" alt=""></img>
-          <img src={SidebarIcon}  style={{ "marginTop" : "-12px", width : "62px", height : "63px"}} className="menu-icon" onClick={() => toggleMenu()} alt=""></img>
+          <img src={SidebarIcon}  style={{ "marginTop" : "-12px", width : "42px", height : "49px"}} className="menu-icon" onClick={() => toggleMenu()} alt=""></img>
         </div>
       }
     </header>
