@@ -67,7 +67,7 @@ const Header = (props) => {
               <img src={Logo} alt="logo"  style={{ "marginTop" : "0px", width : "130px", height : "71px"}}/>
               <ul>
                 <li>
-                  <a href="https://superfruit.formstack.com/forms/owners">For creators</a>
+                  <a href="https://www.notion.so/joinguppy/FAQ-e8cfcca57e6b4c779c53c81ed7ef9803">For creators</a>
                   <a href="https://superfruit.formstack.com/forms/business">For brands</a>
                   <a href="https://superfruit.formstack.com/forms/support">For shoppers</a>
                 </li>
