@@ -40,7 +40,7 @@ export const UpdateUserById = (id , data, redirect) => dispatch => {
           });
           redirect ? setTimeout(() => {
             dispatch(() => {
-              window.location.href="/landing"
+              window.location.href="/marketplace"
             })
           },1000) 
           : dispatch(setAlert("data updated successfully" , 'success'));    

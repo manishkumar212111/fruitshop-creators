@@ -67,9 +67,9 @@ const Register = (props) => {
         <header id="header" className="fixed-top">
             <div className="container d-flex align-items-center">
 
-              <div className="logo mr-auto">
+              {/* <div className="logo mr-auto">
                 <img src={Logo} alt="logo" onClick={gotoHome}/>
-              </div>
+              </div> */}
 
            
 

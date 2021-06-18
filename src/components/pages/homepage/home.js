@@ -50,7 +50,7 @@ const Homepage = (props) => {
             } else {
                 setShowPopupText('');
                 setTimeout(() =>{
-                    window.location.href='/landing';
+                    window.location.href='/marketplace';
                 },1000)
             }
         }
@@ -61,7 +61,7 @@ const Homepage = (props) => {
         const users = getUserData('id')
         if(users){
           // document.body.style.backgroundColor = 'white';
-          history.push("/landing");
+          history.push("/marketplace");
         } else {
           // document.body.style.backgroundColor = '#ee7843';
         }
@@ -84,7 +84,7 @@ const Homepage = (props) => {
 
     const handleSocialClick = (social_url, category) => {
         if(!social_url){
-            window.location.href='/landing';
+            window.location.href='/marketplace';
             return;
         }
         props.UpdateUserById(getUserData('id') , { social_url : social_url , category : category}, true)
